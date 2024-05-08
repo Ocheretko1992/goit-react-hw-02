@@ -6,11 +6,11 @@ import { useState } from "react";
 export default function App() {
   const [numClick, setNumClick] = useState(0);
 
-  const [value, setValue] = useState({
-    good: 0,
-    neutral: 0,
-    bad: 0,
-  });
+  // const [value, setValue] = useState({
+  //   good: 0,
+  //   neutral: 0,
+  //   bad: 0,
+  // });
 
   function counterBtn() {
     setNumClick(numClick + 1);
@@ -19,12 +19,6 @@ export default function App() {
     setNumClick(0);
   };
 
-  const changeValue = () => {
-    setValue({
-      ...value,
-      bad: 6,
-    });
-  };
 
   return (
     <div>
@@ -33,7 +27,6 @@ export default function App() {
         value={numClick}
         onCount={counterBtn}
         onReset={handleReset}
-        changeBtn={changeValue}
       />
       {/* <Feedback /> */}
     </div>
