@@ -1,14 +1,10 @@
-export default function OptoinsBtn() {
-
-  const clic = function () {
-   
-  }
+export default function OptoinsBtn({ value, onCount, onReset, changeBtn }) {
   return (
     <div>
-      <button onMouseOver={clic}>Good</button>
-      <button>Neutral</button>
-      <button>Bad</button>
-      <button>Reset</button>
+      <button onClick={changeBtn}>Good: {value}</button>
+      <button onClick={onCount}>Neutral: {value}</button>
+      <button onClick={onCount}>Bad: {value}</button>
+      <button onClick={onReset}>Reset:</button>
     </div>
   );
 }
