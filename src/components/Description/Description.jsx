@@ -1,11 +1,9 @@
-export default function TextDescription() {
+import css from "../Description/Description.module.css";
+export function Description({ name, info }) {
   return (
-    <div>
-      <h1>Sip Happens Café</h1>
-      <p>
-        Please leave your feedback about our service by selecting one of the
-        options below.
-      </p>
+    <div className={css.desc}>
+      <h1>{name}</h1>
+      <p>{info}</p>
     </div>
   );
 }
